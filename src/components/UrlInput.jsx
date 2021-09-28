@@ -1,8 +1,7 @@
 import React, { memo, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
 import ClipBoard from './ClipBoard';
 
-const UrlInput = props => {
+const UrlInput = () => {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
 
@@ -42,10 +41,6 @@ const UrlInput = props => {
       <ClipBoard url={result} />
     </div>
   );
-};
-
-UrlInput.propTypes = {
-  
 };
 
 export default memo(UrlInput);

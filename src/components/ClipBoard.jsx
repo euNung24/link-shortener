@@ -1,4 +1,5 @@
 import ClipboardJS from 'clipboard';
+import PropTypes from 'prop-types';
 import React, { memo, useEffect, useRef } from 'react';
 
 const ClipBoard = ({url}) => {
@@ -24,6 +25,10 @@ const ClipBoard = ({url}) => {
       <button ref={btnRef} data-clipboard-target="#copy-url">Copy</button>
     </div>
   );
+};
+
+ClipBoard.propTypes = {
+  url: PropTypes.string
 };
 
 export default memo(ClipBoard);
