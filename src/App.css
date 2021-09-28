@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+a {
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  height: 60px;
+  background-color: #05445e;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header a {
+  display: block;
+  margin: 0 auto;
+  line-height: 60px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cont-url {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+header a,
+.cont-url > *,
+.footer-info {
+  width: 70%;
+  max-width: 850px;
+}
+
+.cont-url label {
+  display: none;
+}
+
+input {
+  width: calc(100% - 90px);
+  height: 35px;
+  border: none;
+  padding-left: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+button {
+  width: 90px;
+  height: 35px;
+  background: #a49393;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background: #67595e;
+}
+
+.cont-copy .on {
+  background: #67595e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.arrow {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  color: #05445e;
+  padding-bottom: 5px;
+  margin: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  margin-top: 100px;
+}
+
+.footer-info {
+  margin: 0 auto;
+  padding-top: 50px;
+  position: relative;
+}
+
+.footer-info > * {
+  display: block;
+  margin: 0 auto;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.footer-info::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 200px;
+  background: #a49393;
+  z-index: -5;
+}
+
+.footer-info::after {
+  display: inline-block;
+  content: "Go To";
+  line-height: 60px;
+  position: absolute;
+  top: -30px;
+  left: 120px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  color: #464646;
+  font-weight: 600;
+  border-radius: 50%;
+  background: #cdcdcd;
+}
+
+.footer-info a:hover {
+  color: #05445e;
 }
